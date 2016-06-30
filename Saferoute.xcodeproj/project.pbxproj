@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55600F501D257B7C00821585 /* BluePushpin.png in Resources */ = {isa = PBXBuildFile; fileRef = 55600F4F1D257B7C00821585 /* BluePushpin.png */; };
 		5574AC451D1A1F4A00F678FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5574AC441D1A1F4A00F678FA /* AppDelegate.swift */; };
 		5574AC471D1A1F4A00F678FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5574AC461D1A1F4A00F678FA /* ViewController.swift */; };
 		5574AC4A1D1A1F4A00F678FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5574AC481D1A1F4A00F678FA /* Main.storyboard */; };
 		5574AC4C1D1A1F4A00F678FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5574AC4B1D1A1F4A00F678FA /* Assets.xcassets */; };
 		5574AC4F1D1A1F4A00F678FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5574AC4D1D1A1F4A00F678FA /* LaunchScreen.storyboard */; };
 		5574AC5A1D1A1F4B00F678FA /* SaferouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5574AC591D1A1F4B00F678FA /* SaferouteTests.swift */; };
+		5574AC651D1A20B000F678FA /* ArcGIS.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5574AC641D1A20B000F678FA /* ArcGIS.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		55600F4F1D257B7C00821585 /* BluePushpin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BluePushpin.png; sourceTree = "<group>"; };
 		5574AC411D1A1F4A00F678FA /* Saferoute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Saferoute.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5574AC441D1A1F4A00F678FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5574AC461D1A1F4A00F678FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +39,7 @@
 		5574AC551D1A1F4B00F678FA /* SaferouteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaferouteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5574AC591D1A1F4B00F678FA /* SaferouteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaferouteTests.swift; sourceTree = "<group>"; };
 		5574AC5B1D1A1F4B00F678FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5574AC641D1A20B000F678FA /* ArcGIS.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ArcGIS.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55600F4E1D257B1B00821585 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5574AC641D1A20B000F678FA /* ArcGIS.bundle */,
+				55600F4F1D257B7C00821585 /* BluePushpin.png */,
+				5574AC501D1A1F4A00F678FA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		5574AC381D1A1F4A00F678FA = {
 			isa = PBXGroup;
 			children = (
@@ -82,7 +96,7 @@
 				5574AC481D1A1F4A00F678FA /* Main.storyboard */,
 				5574AC4B1D1A1F4A00F678FA /* Assets.xcassets */,
 				5574AC4D1D1A1F4A00F678FA /* LaunchScreen.storyboard */,
-				5574AC501D1A1F4A00F678FA /* Info.plist */,
+				55600F4E1D257B1B00821585 /* Supporting Files */,
 			);
 			path = Saferoute;
 			sourceTree = "<group>";
@@ -146,6 +160,7 @@
 				TargetAttributes = {
 					5574AC401D1A1F4A00F678FA = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 3HW277PH2D;
 					};
 					5574AC541D1A1F4B00F678FA = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -179,6 +194,8 @@
 			files = (
 				5574AC4F1D1A1F4A00F678FA /* LaunchScreen.storyboard in Resources */,
 				5574AC4C1D1A1F4A00F678FA /* Assets.xcassets in Resources */,
+				55600F501D257B7C00821585 /* BluePushpin.png in Resources */,
+				5574AC651D1A20B000F678FA /* ArcGIS.bundle in Resources */,
 				5574AC4A1D1A1F4A00F678FA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,10 +344,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(HOME)/Library/SDKs/ArcGIS/iOS/";
 				INFOPLIST_FILE = Saferoute/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					ArcGIS,
+					"-l",
+					"c++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Tony-Li.Saferoute";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -338,10 +368,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(HOME)/Library/SDKs/ArcGIS/iOS/";
 				INFOPLIST_FILE = Saferoute/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					ArcGIS,
+					"-l",
+					"c++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Tony-Li.Saferoute";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -388,6 +431,7 @@
 				5574AC601D1A1F4B00F678FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5574AC611D1A1F4B00F678FA /* Build configuration list for PBXNativeTarget "SaferouteTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +440,7 @@
 				5574AC631D1A1F4B00F678FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
