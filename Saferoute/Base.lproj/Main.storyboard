@@ -22,9 +22,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="170" y="52" width="75" height="21"/>
-                                </variation>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RRq-Fc-woz">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -38,51 +35,87 @@
                                             <segment title="Topographic"/>
                                             <segment title="Satellite"/>
                                         </segments>
-                                        <variation key="heightClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="0.0" y="10" width="414" height="29"/>
-                                        </variation>
                                         <connections>
                                             <action selector="basemapChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="h8n-sg-uDy"/>
                                         </connections>
                                     </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="V72-Mv-M6i" firstAttribute="centerY" secondItem="RRq-Fc-woz" secondAttribute="centerY" id="b7m-ob-c8E"/>
+                                    <constraint firstAttribute="trailing" secondItem="V72-Mv-M6i" secondAttribute="trailing" id="jKs-AN-HHa"/>
+                                    <constraint firstItem="V72-Mv-M6i" firstAttribute="top" secondItem="RRq-Fc-woz" secondAttribute="top" constant="10" id="qRZ-zZ-Dyh"/>
+                                    <constraint firstItem="V72-Mv-M6i" firstAttribute="leading" secondItem="RRq-Fc-woz" secondAttribute="leading" id="yop-Ny-J0M"/>
+                                </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="V72-Mv-M6i"/>
                                     </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="b7m-ob-c8E"/>
+                                        <exclude reference="jKs-AN-HHa"/>
+                                        <exclude reference="qRZ-zZ-Dyh"/>
+                                        <exclude reference="yop-Ny-J0M"/>
+                                    </mask>
                                 </variation>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="183" width="414" height="48"/>
+                                <variation key="heightClass=regular">
                                     <mask key="subviews">
                                         <include reference="V72-Mv-M6i"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="b7m-ob-c8E"/>
+                                        <include reference="jKs-AN-HHa"/>
+                                        <include reference="qRZ-zZ-Dyh"/>
+                                        <include reference="yop-Ny-J0M"/>
                                     </mask>
                                 </variation>
                             </view>
                             <searchBar contentMode="redraw" prompt="Enter a place or address to find" translatesAutoresizingMaskIntoConstraints="NO" id="UDo-Y5-zSM">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="89" width="414" height="75"/>
-                                </variation>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="p8v-lD-zx2"/>
                                 </connections>
                             </searchBar>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ffr-M0-rhd" customClass="AGSMapView">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ffr-M0-rhd" customClass="AGSMapView">
                                 <rect key="frame" x="87" y="167" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="233" width="414" height="391"/>
-                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UDo-Y5-zSM" secondAttribute="trailing" id="0SG-yL-QDW"/>
+                            <constraint firstItem="8z4-Kw-a0z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="32" id="2WK-AC-k4l"/>
+                            <constraint firstItem="RRq-Fc-woz" firstAttribute="trailing" secondItem="Ffr-M0-rhd" secondAttribute="trailing" id="4Ni-jr-92L"/>
+                            <constraint firstItem="UDo-Y5-zSM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7eH-vW-2IO"/>
+                            <constraint firstItem="UDo-Y5-zSM" firstAttribute="top" secondItem="8z4-Kw-a0z" secondAttribute="bottom" constant="16" id="HYY-VZ-Drq"/>
+                            <constraint firstItem="UDo-Y5-zSM" firstAttribute="leading" secondItem="RRq-Fc-woz" secondAttribute="leading" id="L65-76-0lj"/>
+                            <constraint firstItem="8z4-Kw-a0z" firstAttribute="centerX" secondItem="UDo-Y5-zSM" secondAttribute="centerX" id="Yyd-Pb-rwv"/>
+                            <constraint firstItem="Ffr-M0-rhd" firstAttribute="top" secondItem="RRq-Fc-woz" secondAttribute="bottom" constant="2" id="aLx-zr-Mgw"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ffr-M0-rhd" secondAttribute="bottom" constant="112" id="acO-b5-2ZF"/>
+                            <constraint firstItem="UDo-Y5-zSM" firstAttribute="trailing" secondItem="RRq-Fc-woz" secondAttribute="trailing" id="geq-Aq-dWl"/>
+                            <constraint firstItem="RRq-Fc-woz" firstAttribute="top" secondItem="UDo-Y5-zSM" secondAttribute="bottom" constant="19" id="uWa-IW-ZO2"/>
+                            <constraint firstItem="RRq-Fc-woz" firstAttribute="leading" secondItem="Ffr-M0-rhd" secondAttribute="leading" id="xbo-Km-Af9"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="8z4-Kw-a0z"/>
                                 <exclude reference="RRq-Fc-woz"/>
                                 <exclude reference="UDo-Y5-zSM"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="2WK-AC-k4l"/>
+                                <exclude reference="Yyd-Pb-rwv"/>
+                                <exclude reference="0SG-yL-QDW"/>
+                                <exclude reference="7eH-vW-2IO"/>
+                                <exclude reference="HYY-VZ-Drq"/>
+                                <exclude reference="L65-76-0lj"/>
+                                <exclude reference="geq-Aq-dWl"/>
+                                <exclude reference="4Ni-jr-92L"/>
+                                <exclude reference="uWa-IW-ZO2"/>
+                                <exclude reference="xbo-Km-Af9"/>
+                                <exclude reference="aLx-zr-Mgw"/>
+                                <exclude reference="acO-b5-2ZF"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -90,6 +123,20 @@
                                 <include reference="8z4-Kw-a0z"/>
                                 <include reference="RRq-Fc-woz"/>
                                 <include reference="UDo-Y5-zSM"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="2WK-AC-k4l"/>
+                                <include reference="Yyd-Pb-rwv"/>
+                                <include reference="0SG-yL-QDW"/>
+                                <include reference="7eH-vW-2IO"/>
+                                <include reference="HYY-VZ-Drq"/>
+                                <include reference="L65-76-0lj"/>
+                                <include reference="geq-Aq-dWl"/>
+                                <include reference="4Ni-jr-92L"/>
+                                <include reference="uWa-IW-ZO2"/>
+                                <include reference="xbo-Km-Af9"/>
+                                <include reference="aLx-zr-Mgw"/>
+                                <include reference="acO-b5-2ZF"/>
                             </mask>
                         </variation>
                     </view>

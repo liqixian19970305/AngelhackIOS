@@ -53,6 +53,7 @@ class ViewController: UIViewController, AGSMapViewLayerDelegate, UISearchBarDele
         switch sender.selectedSegmentIndex {
         case 0:  //gray
             basemapURL = NSURL(string: "http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer")
+            /*basemapURL=NSURL(string: "http://services1.arcgis.com/p84PN4WZvOWzi2j2/arcgis/rest/services/StreetLights/FeatureServer/0")*/
         case 1:  //oceans
             basemapURL = NSURL(string: "http://services.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer")
         case 2:  //nat geo
