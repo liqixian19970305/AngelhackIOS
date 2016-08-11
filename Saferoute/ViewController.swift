@@ -10,20 +10,40 @@ import UIKit
 import ArcGIS
 
 let kBasemapLayerName = "Basemap Tiled Layer"
+let kRouteTaskUrl = "http://sampleserver3.arcgisonline.com/ArcGIS/rest/services/Network/USA/NAServer/Route"
 
-class ViewController: UIViewController, AGSMapViewLayerDelegate, UISearchBarDelegate, AGSLocatorDelegate {
-    
+class ViewController: UIViewController, AGSMapViewLayerDelegate, AGSRouteTaskDelegate,AGSLayerCalloutDelegate, UIAlertViewDelegate, UISearchBarDelegate, AGSLocatorDelegate, AGSFeatureLayerQueryDelegate {
+    @IBOutlet weak var sketchModeSegCtrl: UISegmentedControl!
+    @IBOutlet weak var addBtn: UIBarButtonItem!
     @IBOutlet weak var mapView: AGSMapView!
+    
     var graphicLayer:AGSGraphicsLayer!
     var locator:AGSLocator!
     var calloutTemplate:AGSCalloutTemplate!
     
+    var sketchLayer:AGSSketchGraphicsLayer!
+    var routeTask:AGSRouteTask!
+    var routeTaskParams:AGSRouteTaskParameters!
+    var currentStopGraphic:AGSStopGraphic!
+    var selectedGraphic:AGSGraphic!
+    var currentDirectionGraphic:AGSDirectionGraphic!
+    var stopCalloutView:UIView!
+    var routeResult:AGSRouteResult!
+    
+    var numStops:Int = 0
+    var numBarriers:Int = 0
+    var directionIndex:Int = 0
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         //Add a basemap tiled layer
-        let url = NSURL(string: "http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer")
+        let url = NSURL(string: "http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer")
         let tiledLayer = AGSTiledMapServiceLayer(URL: url)
         self.mapView.addMapLayer(tiledLayer, withName: "Basemap Tiled Layer")
         
@@ -44,6 +64,7 @@ class ViewController: UIViewController, AGSMapViewLayerDelegate, UISearchBarDele
         //do something now that the map is loaded
         //for example, show the current location on the map
         mapView.locationDisplay.startDataSource()
+       
     }
     
     @IBAction func basemapChanged(sender: UISegmentedControl) {
@@ -63,14 +84,35 @@ class ViewController: UIViewController, AGSMapViewLayerDelegate, UISearchBarDele
         default:  //sat
             basemapURL = NSURL(string: "http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer")
         }
-        
-        //remove the existing basemap layer
         self.mapView.removeMapLayerWithName(kBasemapLayerName)
         
         //add new Layer
         let newBasemapLayer = AGSTiledMapServiceLayer(URL: basemapURL)
         self.mapView.insertMapLayer(newBasemapLayer, withName: kBasemapLayerName, atIndex: 0);
     }
+    
+    @IBAction func showStreetLights(sender: AnyObject) {
+        //CLOUD DATA
+        let testPoint=AGSPoint(fromDecimalDegreesString: "34.0522 N, 118.2437 W", withSpatialReference: mapView.spatialReference)
+        mapView.zoomToScale(10000, withCenterPoint: testPoint, animated: true)
+        
+        let featureLayerURL = NSURL(string: "http://services1.arcgis.com/p84PN4WZvOWzi2j2/arcgis/rest/services/StreetLights/FeatureServer/0")
+        //let featureLayerURL = NSURL(string: "http://services.arcgis.com/oKgs2tbjK6zwTdvi/arcgis/rest/services/Major_World_Cities/FeatureServer/0")
+        
+        let featureLayer = AGSFeatureLayer(URL: featureLayerURL, mode: .OnDemand)
+        self.mapView.addMapLayer(featureLayer, withName: "Street Lights")
+        
+        //SYMBOLOGY
+        /*let featureSymbol = AGSSimpleMarkerSymbol(color:UIColor(red: 0, green: 0.46, blue: 0.68, alpha: 1))
+        featureSymbol.size = CGSizeMake(7, 7)
+        featureSymbol.style = .Circle
+        featureSymbol.outline = nil
+        featureLayer.renderer = AGSSimpleRenderer(symbol: featureSymbol)*/
+        
+        
+
+    }
+    
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         //Hide the keyboard
@@ -148,5 +190,20 @@ class ViewController: UIViewController, AGSMapViewLayerDelegate, UISearchBarDele
     func locator(locator: AGSLocator!, operation op: NSOperation!, didFailLocationsForAddress error: NSError!) {
         UIAlertView(title: "Locator Failed", message: error.localizedDescription, delegate: nil, cancelButtonTitle: "OK").show()
     }
+    
+    func featureLayer(featureLayer: AGSFeatureLayer!, operation op: NSOperation!, didSelectFeaturesWithFeatureSet featureSet: AGSFeatureSet!) {
+        //ZOOM TO SELECTED DATA
+        var env:AGSMutableEnvelope!
+        for selectedFeature in featureSet.features as! [AGSGraphic]{
+            if env != nil {
+                env.unionWithEnvelope(selectedFeature.geometry.envelope)
+            }
+            else {
+                env = selectedFeature.geometry.envelope.mutableCopy() as! AGSMutableEnvelope
+            }
+        }
+        self.mapView.zoomToGeometry(env, withPadding: 20, animated: true)
+    }
+
 
 }

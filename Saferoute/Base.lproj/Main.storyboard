@@ -20,13 +20,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saferoute" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8z4-Kw-a0z">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RRq-Fc-woz">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="V72-Mv-M6i">
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="3" translatesAutoresizingMaskIntoConstraints="NO" id="V72-Mv-M6i">
                                         <rect key="frame" x="-60" y="-14" width="121" height="29"/>
                                         <segments>
                                             <segment title="Gray"/>
@@ -81,6 +81,35 @@
                                 <rect key="frame" x="87" y="167" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wnb-ds-nna">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Show Street Lights"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="7" y="231" width="130" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="showStreetLights:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T4Q-Xe-Lud"/>
+                                </connections>
+                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nrD-w1-R6N">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="add" id="0HC-Cg-kYS"/>
+                                    <barButtonItem style="plain" id="zaP-fq-UVR" userLabel="Stop or Barrier">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="83E-ff-eg8">
+                                            <rect key="frame" x="-60" y="-14" width="121" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="Stop"/>
+                                                <segment title="Barrier"/>
+                                            </segments>
+                                        </segmentedControl>
+                                    </barButtonItem>
+                                </items>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="660" width="414" height="44"/>
+                                </variation>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -91,8 +120,12 @@
                             <constraint firstItem="UDo-Y5-zSM" firstAttribute="top" secondItem="8z4-Kw-a0z" secondAttribute="bottom" constant="16" id="HYY-VZ-Drq"/>
                             <constraint firstItem="UDo-Y5-zSM" firstAttribute="leading" secondItem="RRq-Fc-woz" secondAttribute="leading" id="L65-76-0lj"/>
                             <constraint firstItem="8z4-Kw-a0z" firstAttribute="centerX" secondItem="UDo-Y5-zSM" secondAttribute="centerX" id="Yyd-Pb-rwv"/>
-                            <constraint firstItem="Ffr-M0-rhd" firstAttribute="top" secondItem="RRq-Fc-woz" secondAttribute="bottom" constant="2" id="aLx-zr-Mgw"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ffr-M0-rhd" secondAttribute="bottom" constant="112" id="acO-b5-2ZF"/>
+                            <constraint firstItem="Ffr-M0-rhd" firstAttribute="top" secondItem="RRq-Fc-woz" secondAttribute="bottom" constant="2" id="aLx-zr-Mgw">
+                                <variation key="heightClass=regular" constant="38"/>
+                            </constraint>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ffr-M0-rhd" secondAttribute="bottom" constant="112" id="acO-b5-2ZF">
+                                <variation key="heightClass=regular" constant="76"/>
+                            </constraint>
                             <constraint firstItem="UDo-Y5-zSM" firstAttribute="trailing" secondItem="RRq-Fc-woz" secondAttribute="trailing" id="geq-Aq-dWl"/>
                             <constraint firstItem="RRq-Fc-woz" firstAttribute="top" secondItem="UDo-Y5-zSM" secondAttribute="bottom" constant="19" id="uWa-IW-ZO2"/>
                             <constraint firstItem="RRq-Fc-woz" firstAttribute="leading" secondItem="Ffr-M0-rhd" secondAttribute="leading" id="xbo-Km-Af9"/>
@@ -102,6 +135,8 @@
                                 <exclude reference="8z4-Kw-a0z"/>
                                 <exclude reference="RRq-Fc-woz"/>
                                 <exclude reference="UDo-Y5-zSM"/>
+                                <exclude reference="Wnb-ds-nna"/>
+                                <exclude reference="nrD-w1-R6N"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="2WK-AC-k4l"/>
@@ -123,6 +158,8 @@
                                 <include reference="8z4-Kw-a0z"/>
                                 <include reference="RRq-Fc-woz"/>
                                 <include reference="UDo-Y5-zSM"/>
+                                <include reference="Wnb-ds-nna"/>
+                                <include reference="nrD-w1-R6N"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="2WK-AC-k4l"/>
@@ -143,12 +180,14 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="addBtn" destination="0HC-Cg-kYS" id="CXj-JI-V6d"/>
                         <outlet property="mapView" destination="Ffr-M0-rhd" id="5Ka-c2-FA9"/>
+                        <outlet property="sketchModeSegCtrl" destination="83E-ff-eg8" id="7r6-am-yZJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="245" y="315"/>
+            <point key="canvasLocation" x="-21" y="255"/>
         </scene>
     </scenes>
 </document>
