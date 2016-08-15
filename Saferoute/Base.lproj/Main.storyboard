@@ -78,10 +78,6 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="p8v-lD-zx2"/>
                                 </connections>
                             </searchBar>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ffr-M0-rhd" customClass="AGSMapView">
-                                <rect key="frame" x="87" y="167" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wnb-ds-nna">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Show Street Lights"/>
@@ -89,26 +85,36 @@
                                     <action selector="showStreetLights:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T4Q-Xe-Lud"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ffr-M0-rhd" customClass="AGSMapView">
+                                <rect key="frame" x="87" y="167" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="UDo-Y5-zSM" secondAttribute="trailing" id="0SG-yL-QDW"/>
-                            <constraint firstItem="Wnb-ds-nna" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-13" id="1a0-Zp-Fei"/>
+                            <constraint firstItem="Wnb-ds-nna" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-13" id="1a0-Zp-Fei">
+                                <variation key="heightClass=regular" constant="-20"/>
+                            </constraint>
                             <constraint firstItem="8z4-Kw-a0z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="32" id="2WK-AC-k4l"/>
                             <constraint firstItem="RRq-Fc-woz" firstAttribute="trailing" secondItem="Ffr-M0-rhd" secondAttribute="trailing" id="4Ni-jr-92L"/>
                             <constraint firstItem="UDo-Y5-zSM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7eH-vW-2IO"/>
                             <constraint firstItem="UDo-Y5-zSM" firstAttribute="top" secondItem="8z4-Kw-a0z" secondAttribute="bottom" constant="16" id="HYY-VZ-Drq"/>
                             <constraint firstItem="UDo-Y5-zSM" firstAttribute="leading" secondItem="RRq-Fc-woz" secondAttribute="leading" id="L65-76-0lj"/>
-                            <constraint firstItem="Ffr-M0-rhd" firstAttribute="top" secondItem="Wnb-ds-nna" secondAttribute="bottom" constant="8" symbolic="YES" id="Or7-Up-ypK"/>
+                            <constraint firstItem="Ffr-M0-rhd" firstAttribute="top" secondItem="Wnb-ds-nna" secondAttribute="bottom" constant="8" symbolic="YES" id="Or7-Up-ypK">
+                                <variation key="heightClass=regular" constant="1"/>
+                            </constraint>
                             <constraint firstItem="8z4-Kw-a0z" firstAttribute="centerX" secondItem="UDo-Y5-zSM" secondAttribute="centerX" id="Yyd-Pb-rwv"/>
                             <constraint firstItem="Ffr-M0-rhd" firstAttribute="top" secondItem="RRq-Fc-woz" secondAttribute="bottom" constant="2" id="aLx-zr-Mgw">
-                                <variation key="heightClass=regular" constant="38"/>
+                                <variation key="heightClass=regular" constant="31"/>
                             </constraint>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ffr-M0-rhd" secondAttribute="bottom" constant="112" id="acO-b5-2ZF">
-                                <variation key="heightClass=regular" constant="52"/>
+                                <variation key="heightClass=regular" constant="78"/>
                             </constraint>
                             <constraint firstItem="UDo-Y5-zSM" firstAttribute="trailing" secondItem="RRq-Fc-woz" secondAttribute="trailing" id="geq-Aq-dWl"/>
-                            <constraint firstItem="RRq-Fc-woz" firstAttribute="top" secondItem="UDo-Y5-zSM" secondAttribute="bottom" constant="19" id="uWa-IW-ZO2"/>
+                            <constraint firstItem="RRq-Fc-woz" firstAttribute="top" secondItem="UDo-Y5-zSM" secondAttribute="bottom" constant="19" id="uWa-IW-ZO2">
+                                <variation key="heightClass=regular" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="RRq-Fc-woz" firstAttribute="leading" secondItem="Ffr-M0-rhd" secondAttribute="leading" id="xbo-Km-Af9"/>
                         </constraints>
                         <variation key="default">

@@ -58,7 +58,6 @@ class ViewController: UIViewController, AGSMapViewLayerDelegate, UIAlertViewDele
         switch sender.selectedSegmentIndex {
         case 0:  //gray
             basemapURL = NSURL(string: "http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer")
-            /*basemapURL=NSURL(string: "http://services1.arcgis.com/p84PN4WZvOWzi2j2/arcgis/rest/services/StreetLights/FeatureServer/0")*/
         case 1:  //oceans
             basemapURL = NSURL(string: "http://services.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer")
         case 2:  //nat geo
@@ -77,7 +76,7 @@ class ViewController: UIViewController, AGSMapViewLayerDelegate, UIAlertViewDele
     
     @IBAction func showStreetLights(sender: AnyObject) {
         //CLOUD DATA
-        let testPoint=AGSPoint(fromDecimalDegreesString: "34.0522 N, 118.2437 W", withSpatialReference: mapView.spatialReference)
+        let testPoint = AGSPoint(fromDecimalDegreesString: "34.0522 N, 118.2437 W", withSpatialReference: mapView.spatialReference)
         mapView.zoomToScale(10000, withCenterPoint: testPoint, animated: true)
         
         let featureLayerURL = NSURL(string: "http://services1.arcgis.com/p84PN4WZvOWzi2j2/arcgis/rest/services/StreetLights/FeatureServer/0")
