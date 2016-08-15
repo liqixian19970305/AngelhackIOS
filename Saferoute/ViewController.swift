@@ -10,29 +10,13 @@ import UIKit
 import ArcGIS
 
 let kBasemapLayerName = "Basemap Tiled Layer"
-let kRouteTaskUrl = "http://sampleserver3.arcgisonline.com/ArcGIS/rest/services/Network/USA/NAServer/Route"
 
-class ViewController: UIViewController, AGSMapViewLayerDelegate, AGSRouteTaskDelegate,AGSLayerCalloutDelegate, UIAlertViewDelegate, UISearchBarDelegate, AGSLocatorDelegate, AGSFeatureLayerQueryDelegate {
-    @IBOutlet weak var sketchModeSegCtrl: UISegmentedControl!
-    @IBOutlet weak var addBtn: UIBarButtonItem!
+class ViewController: UIViewController, AGSMapViewLayerDelegate, UIAlertViewDelegate, UISearchBarDelegate, AGSLocatorDelegate, AGSFeatureLayerQueryDelegate {
     @IBOutlet weak var mapView: AGSMapView!
     
     var graphicLayer:AGSGraphicsLayer!
     var locator:AGSLocator!
     var calloutTemplate:AGSCalloutTemplate!
-    
-    var sketchLayer:AGSSketchGraphicsLayer!
-    var routeTask:AGSRouteTask!
-    var routeTaskParams:AGSRouteTaskParameters!
-    var currentStopGraphic:AGSStopGraphic!
-    var selectedGraphic:AGSGraphic!
-    var currentDirectionGraphic:AGSDirectionGraphic!
-    var stopCalloutView:UIView!
-    var routeResult:AGSRouteResult!
-    
-    var numStops:Int = 0
-    var numBarriers:Int = 0
-    var directionIndex:Int = 0
     
     override func prefersStatusBarHidden() -> Bool {
         return true
@@ -97,8 +81,6 @@ class ViewController: UIViewController, AGSMapViewLayerDelegate, AGSRouteTaskDel
         mapView.zoomToScale(10000, withCenterPoint: testPoint, animated: true)
         
         let featureLayerURL = NSURL(string: "http://services1.arcgis.com/p84PN4WZvOWzi2j2/arcgis/rest/services/StreetLights/FeatureServer/0")
-        //let featureLayerURL = NSURL(string: "http://services.arcgis.com/oKgs2tbjK6zwTdvi/arcgis/rest/services/Major_World_Cities/FeatureServer/0")
-        
         let featureLayer = AGSFeatureLayer(URL: featureLayerURL, mode: .OnDemand)
         self.mapView.addMapLayer(featureLayer, withName: "Street Lights")
         

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -84,47 +85,27 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wnb-ds-nna">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Show Street Lights"/>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="7" y="231" width="130" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="showStreetLights:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T4Q-Xe-Lud"/>
                                 </connections>
                             </button>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nrD-w1-R6N">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <items>
-                                    <barButtonItem systemItem="add" id="0HC-Cg-kYS"/>
-                                    <barButtonItem style="plain" id="zaP-fq-UVR" userLabel="Stop or Barrier">
-                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="83E-ff-eg8">
-                                            <rect key="frame" x="-60" y="-14" width="121" height="29"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <segments>
-                                                <segment title="Stop"/>
-                                                <segment title="Barrier"/>
-                                            </segments>
-                                        </segmentedControl>
-                                    </barButtonItem>
-                                </items>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="660" width="414" height="44"/>
-                                </variation>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="UDo-Y5-zSM" secondAttribute="trailing" id="0SG-yL-QDW"/>
+                            <constraint firstItem="Wnb-ds-nna" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-13" id="1a0-Zp-Fei"/>
                             <constraint firstItem="8z4-Kw-a0z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="32" id="2WK-AC-k4l"/>
                             <constraint firstItem="RRq-Fc-woz" firstAttribute="trailing" secondItem="Ffr-M0-rhd" secondAttribute="trailing" id="4Ni-jr-92L"/>
                             <constraint firstItem="UDo-Y5-zSM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7eH-vW-2IO"/>
                             <constraint firstItem="UDo-Y5-zSM" firstAttribute="top" secondItem="8z4-Kw-a0z" secondAttribute="bottom" constant="16" id="HYY-VZ-Drq"/>
                             <constraint firstItem="UDo-Y5-zSM" firstAttribute="leading" secondItem="RRq-Fc-woz" secondAttribute="leading" id="L65-76-0lj"/>
+                            <constraint firstItem="Ffr-M0-rhd" firstAttribute="top" secondItem="Wnb-ds-nna" secondAttribute="bottom" constant="8" symbolic="YES" id="Or7-Up-ypK"/>
                             <constraint firstItem="8z4-Kw-a0z" firstAttribute="centerX" secondItem="UDo-Y5-zSM" secondAttribute="centerX" id="Yyd-Pb-rwv"/>
                             <constraint firstItem="Ffr-M0-rhd" firstAttribute="top" secondItem="RRq-Fc-woz" secondAttribute="bottom" constant="2" id="aLx-zr-Mgw">
                                 <variation key="heightClass=regular" constant="38"/>
                             </constraint>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ffr-M0-rhd" secondAttribute="bottom" constant="112" id="acO-b5-2ZF">
-                                <variation key="heightClass=regular" constant="76"/>
+                                <variation key="heightClass=regular" constant="52"/>
                             </constraint>
                             <constraint firstItem="UDo-Y5-zSM" firstAttribute="trailing" secondItem="RRq-Fc-woz" secondAttribute="trailing" id="geq-Aq-dWl"/>
                             <constraint firstItem="RRq-Fc-woz" firstAttribute="top" secondItem="UDo-Y5-zSM" secondAttribute="bottom" constant="19" id="uWa-IW-ZO2"/>
@@ -136,19 +117,20 @@
                                 <exclude reference="RRq-Fc-woz"/>
                                 <exclude reference="UDo-Y5-zSM"/>
                                 <exclude reference="Wnb-ds-nna"/>
-                                <exclude reference="nrD-w1-R6N"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="2WK-AC-k4l"/>
-                                <exclude reference="Yyd-Pb-rwv"/>
                                 <exclude reference="0SG-yL-QDW"/>
                                 <exclude reference="7eH-vW-2IO"/>
                                 <exclude reference="HYY-VZ-Drq"/>
                                 <exclude reference="L65-76-0lj"/>
                                 <exclude reference="geq-Aq-dWl"/>
+                                <exclude reference="2WK-AC-k4l"/>
+                                <exclude reference="Yyd-Pb-rwv"/>
                                 <exclude reference="4Ni-jr-92L"/>
                                 <exclude reference="uWa-IW-ZO2"/>
                                 <exclude reference="xbo-Km-Af9"/>
+                                <exclude reference="1a0-Zp-Fei"/>
+                                <exclude reference="Or7-Up-ypK"/>
                                 <exclude reference="aLx-zr-Mgw"/>
                                 <exclude reference="acO-b5-2ZF"/>
                             </mask>
@@ -159,19 +141,20 @@
                                 <include reference="RRq-Fc-woz"/>
                                 <include reference="UDo-Y5-zSM"/>
                                 <include reference="Wnb-ds-nna"/>
-                                <include reference="nrD-w1-R6N"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="2WK-AC-k4l"/>
-                                <include reference="Yyd-Pb-rwv"/>
                                 <include reference="0SG-yL-QDW"/>
                                 <include reference="7eH-vW-2IO"/>
                                 <include reference="HYY-VZ-Drq"/>
                                 <include reference="L65-76-0lj"/>
                                 <include reference="geq-Aq-dWl"/>
+                                <include reference="2WK-AC-k4l"/>
+                                <include reference="Yyd-Pb-rwv"/>
                                 <include reference="4Ni-jr-92L"/>
                                 <include reference="uWa-IW-ZO2"/>
                                 <include reference="xbo-Km-Af9"/>
+                                <include reference="1a0-Zp-Fei"/>
+                                <include reference="Or7-Up-ypK"/>
                                 <include reference="aLx-zr-Mgw"/>
                                 <include reference="acO-b5-2ZF"/>
                             </mask>
@@ -180,9 +163,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="addBtn" destination="0HC-Cg-kYS" id="CXj-JI-V6d"/>
                         <outlet property="mapView" destination="Ffr-M0-rhd" id="5Ka-c2-FA9"/>
-                        <outlet property="sketchModeSegCtrl" destination="83E-ff-eg8" id="7r6-am-yZJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

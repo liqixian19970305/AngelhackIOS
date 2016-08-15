@@ -14,7 +14,8 @@
 		5574AC4C1D1A1F4A00F678FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5574AC4B1D1A1F4A00F678FA /* Assets.xcassets */; };
 		5574AC4F1D1A1F4A00F678FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5574AC4D1D1A1F4A00F678FA /* LaunchScreen.storyboard */; };
 		5574AC5A1D1A1F4B00F678FA /* SaferouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5574AC591D1A1F4B00F678FA /* SaferouteTests.swift */; };
-		5574AC651D1A20B000F678FA /* ArcGIS.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5574AC641D1A20B000F678FA /* ArcGIS.bundle */; };
+		E90537BC6DC003B87443AD4A /* Pods_Saferoute.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A601E902113633C2C6922B4A /* Pods_Saferoute.framework */; };
+		EBFB9FFC2597F5D001F630F1 /* Pods_SaferouteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DA458207E5058FE10D8DE9 /* Pods_SaferouteTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00DE31931033B5AC9FCDBC50 /* Pods-Saferoute.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saferoute.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Saferoute/Pods-Saferoute.debug.xcconfig"; sourceTree = "<group>"; };
+		2AFF887F67C63D8CD2410A31 /* Pods-Saferoute.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saferoute.release.xcconfig"; path = "Pods/Target Support Files/Pods-Saferoute/Pods-Saferoute.release.xcconfig"; sourceTree = "<group>"; };
+		49DA458207E5058FE10D8DE9 /* Pods_SaferouteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SaferouteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55600F4F1D257B7C00821585 /* BluePushpin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BluePushpin.png; sourceTree = "<group>"; };
 		5574AC411D1A1F4A00F678FA /* Saferoute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Saferoute.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5574AC441D1A1F4A00F678FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,7 +43,9 @@
 		5574AC551D1A1F4B00F678FA /* SaferouteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaferouteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5574AC591D1A1F4B00F678FA /* SaferouteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaferouteTests.swift; sourceTree = "<group>"; };
 		5574AC5B1D1A1F4B00F678FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5574AC641D1A20B000F678FA /* ArcGIS.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ArcGIS.bundle; sourceTree = "<group>"; };
+		8BF49F8500F8772583978DAB /* Pods-SaferouteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SaferouteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SaferouteTests/Pods-SaferouteTests.release.xcconfig"; sourceTree = "<group>"; };
+		A601E902113633C2C6922B4A /* Pods_Saferoute.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Saferoute.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C86BB2BCE547ECF5B8A5E17E /* Pods-SaferouteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SaferouteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SaferouteTests/Pods-SaferouteTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E90537BC6DC003B87443AD4A /* Pods_Saferoute.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBFB9FFC2597F5D001F630F1 /* Pods_SaferouteTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +71,6 @@
 		55600F4E1D257B1B00821585 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5574AC641D1A20B000F678FA /* ArcGIS.bundle */,
 				55600F4F1D257B7C00821585 /* BluePushpin.png */,
 				5574AC501D1A1F4A00F678FA /* Info.plist */,
 			);
@@ -76,6 +83,8 @@
 				5574AC431D1A1F4A00F678FA /* Saferoute */,
 				5574AC581D1A1F4B00F678FA /* SaferouteTests */,
 				5574AC421D1A1F4A00F678FA /* Products */,
+				AE895ABD65A4CA2BF02F4D90 /* Pods */,
+				A0736E0173BA669E1097BC1E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +119,26 @@
 			path = SaferouteTests;
 			sourceTree = "<group>";
 		};
+		A0736E0173BA669E1097BC1E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A601E902113633C2C6922B4A /* Pods_Saferoute.framework */,
+				49DA458207E5058FE10D8DE9 /* Pods_SaferouteTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE895ABD65A4CA2BF02F4D90 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				00DE31931033B5AC9FCDBC50 /* Pods-Saferoute.debug.xcconfig */,
+				2AFF887F67C63D8CD2410A31 /* Pods-Saferoute.release.xcconfig */,
+				C86BB2BCE547ECF5B8A5E17E /* Pods-SaferouteTests.debug.xcconfig */,
+				8BF49F8500F8772583978DAB /* Pods-SaferouteTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -117,9 +146,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5574AC5E1D1A1F4B00F678FA /* Build configuration list for PBXNativeTarget "Saferoute" */;
 			buildPhases = (
+				052195FA9E0619072DA1E2A4 /* [CP] Check Pods Manifest.lock */,
 				5574AC3D1D1A1F4A00F678FA /* Sources */,
 				5574AC3E1D1A1F4A00F678FA /* Frameworks */,
 				5574AC3F1D1A1F4A00F678FA /* Resources */,
+				833C9BA1DCF2C5ED38055569 /* [CP] Embed Pods Frameworks */,
+				AC699D1DC5BB342CB51A4169 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,9 +166,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5574AC611D1A1F4B00F678FA /* Build configuration list for PBXNativeTarget "SaferouteTests" */;
 			buildPhases = (
+				0D640C7E4B6E7EA4300A6DD6 /* [CP] Check Pods Manifest.lock */,
 				5574AC511D1A1F4B00F678FA /* Sources */,
 				5574AC521D1A1F4B00F678FA /* Frameworks */,
 				5574AC531D1A1F4B00F678FA /* Resources */,
+				4FAAC1A12EE8875600158D5F /* [CP] Embed Pods Frameworks */,
+				CE111A19CC84A179896C8214 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,7 +230,6 @@
 				5574AC4F1D1A1F4A00F678FA /* LaunchScreen.storyboard in Resources */,
 				5574AC4C1D1A1F4A00F678FA /* Assets.xcassets in Resources */,
 				55600F501D257B7C00821585 /* BluePushpin.png in Resources */,
-				5574AC651D1A20B000F678FA /* ArcGIS.bundle in Resources */,
 				5574AC4A1D1A1F4A00F678FA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,6 +242,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		052195FA9E0619072DA1E2A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0D640C7E4B6E7EA4300A6DD6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4FAAC1A12EE8875600158D5F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SaferouteTests/Pods-SaferouteTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		833C9BA1DCF2C5ED38055569 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Saferoute/Pods-Saferoute-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC699D1DC5BB342CB51A4169 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Saferoute/Pods-Saferoute-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE111A19CC84A179896C8214 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SaferouteTests/Pods-SaferouteTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5574AC3D1D1A1F4A00F678FA /* Sources */ = {
@@ -297,6 +424,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -335,6 +463,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -342,22 +471,15 @@
 		};
 		5574AC5F1D1A1F4B00F678FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00DE31931033B5AC9FCDBC50 /* Pods-Saferoute.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(HOME)/Library/SDKs/ArcGIS/iOS/";
 				INFOPLIST_FILE = Saferoute/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-framework",
-					ArcGIS,
-					"-l",
-					"c++",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Tony-Li.Saferoute";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -366,22 +488,15 @@
 		};
 		5574AC601D1A1F4B00F678FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AFF887F67C63D8CD2410A31 /* Pods-Saferoute.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(HOME)/Library/SDKs/ArcGIS/iOS/";
 				INFOPLIST_FILE = Saferoute/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-framework",
-					ArcGIS,
-					"-l",
-					"c++",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Tony-Li.Saferoute";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -390,6 +505,7 @@
 		};
 		5574AC621D1A1F4B00F678FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C86BB2BCE547ECF5B8A5E17E /* Pods-SaferouteTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SaferouteTests/Info.plist;
@@ -402,6 +518,7 @@
 		};
 		5574AC631D1A1F4B00F678FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BF49F8500F8772583978DAB /* Pods-SaferouteTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SaferouteTests/Info.plist;
